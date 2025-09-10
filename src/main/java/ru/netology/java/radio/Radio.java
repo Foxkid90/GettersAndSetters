@@ -22,22 +22,20 @@ public class Radio {
         currentRadioStationNumber = newCurrentRadioStationNumber;
     }
 
-    public int next() {
-        if (currentRadioStationNumber >= 9) {
-            currentRadioStationNumber = 0;
-        } else {
+    public void next() {
+        if (currentRadioStationNumber < 9) {
             currentRadioStationNumber = currentRadioStationNumber + 1;
+        } else {
+            currentRadioStationNumber = 0;
         }
-        return currentRadioStationNumber;
     }
 
-    public int prev() {
-        if (currentRadioStationNumber <= 0) {
-            currentRadioStationNumber = 9;
-        } else {
+    public void prev() {
+        if (currentRadioStationNumber > 0) {
             currentRadioStationNumber = currentRadioStationNumber - 1;
+        } else {
+            currentRadioStationNumber = 9;
         }
-        return currentRadioStationNumber;
     }
 
     // РАЗДЕЛ РАБОТЫ С УРОВНЕМ ГРОМКОСТИ
@@ -58,24 +56,18 @@ public class Radio {
         currentSoundVolumeLevel = newSoundVolumeLevel;
     }
 
-    public int increase() {
+    public void increase() {
 
-        if (currentSoundVolumeLevel >= 100) {
-            return currentSoundVolumeLevel;
-        } else {
+        if (currentSoundVolumeLevel < 100) {
             currentSoundVolumeLevel = currentSoundVolumeLevel + 1;
         }
-        return currentSoundVolumeLevel;
     }
 
-    public int decrease() {
+    public void decrease() {
 
-        if (currentSoundVolumeLevel <= 0) {
-            return currentSoundVolumeLevel;
-        } else {
+        if (currentSoundVolumeLevel > 0) {
             currentSoundVolumeLevel = currentSoundVolumeLevel - 1;
         }
-        return currentSoundVolumeLevel;
     }
 
 
