@@ -1,8 +1,8 @@
 package ru.netology.java.radio;
 
-public class Radio {
-    public int currentRadioStationNumber;
-    public int currentSoundVolumeLevel;
+public class Radio { // СКИНУТЬ НА ГУГЛ ДИСК
+    private int currentRadioStationNumber;
+    private int currentSoundVolumeLevel;
 
 
     // РАЗДЕЛ РАБОТЫ С РАДИОСТАНЦИЯМИ
